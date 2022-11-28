@@ -90,7 +90,7 @@ public final class LambdaUtilities {
                return oldSet;
             })
         );
-        return null;
+        return m;
     }
 
     /**
