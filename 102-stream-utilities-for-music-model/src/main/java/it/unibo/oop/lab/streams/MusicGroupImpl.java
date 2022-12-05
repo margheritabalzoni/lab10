@@ -31,12 +31,15 @@ public final class MusicGroupImpl implements MusicGroup {
 
     @Override
     public Stream<String> orderedSongNames() {
-        return null;
+        return songs.stream()
+            .map (Song :: getSongName)
+            .sorted();
     }
 
     @Override
     public Stream<String> albumNames() {
-        return null;
+        return this.albums.entrySet().stream()
+            .map(k  -> k.getKey());
     }
 
     @Override
